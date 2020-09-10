@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import * as React from "react";
 import {jsx} from '@emotion/core'
-import styled from "@emotion/styled";
 import {Dropdown, Menu, Spin} from 'antd'
 import {useIntl} from 'react-intl'
 import {HeartOutlined, HomeOutlined, LogoutOutlined, MessageOutlined} from '@ant-design/icons'
@@ -10,6 +9,7 @@ import Router from "next/router";
 
 import {CustomAvatar} from "../CustomAvatar";
 import {customAvatar, headerRightWrapper, addition_menu_style} from "./styles"
+import {IconContainer, StyledMenuItemWrapper} from "./components";
 
 const UserInfo = () => {
     // TODO(ddanev):it seems like we have incorrectly implemented dropdown,
@@ -36,25 +36,6 @@ const UserInfo = () => {
     )
 };
 
-// TODO: rework this awful stylisation of menu header (write custom header component);
-const IconContainer = styled.div`
-    position: relative;
-    
-    ${props => props.active && `
-        &:after {
-            content: "";
-            display: block;
-            position: absolute;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background-color: #fff;
-            bottom: 10px;
-            margin-left: -3px;
-            left: 10px;
-        };
-    `}
-`;
 
 export class MenuHeader extends React.Component {
     state = {
@@ -80,7 +61,10 @@ export class MenuHeader extends React.Component {
                 >
                     {this.renderMenuItems()}
                 </Menu>
-                <UserInfo/>
+                <StyledMenuItemWrapper style={{marginLeft: "auto"}}>
+                    <UserInfo/>
+                </StyledMenuItemWrapper>
+
             </div>
         )
     }
@@ -105,6 +89,7 @@ export class MenuHeader extends React.Component {
                 <Menu.Item
                     style={{
                         borderBottom: "none",
+                        margin: 0,
                     }}
                     key={key}
                     icon={menuItem.icon(key === this.state.active)}
@@ -116,6 +101,7 @@ export class MenuHeader extends React.Component {
     icon_style = {
         fontSize: "22px",
         color: "#fff",
+        marginRight: 0,
     };
 
     routes_config = [
@@ -123,9 +109,11 @@ export class MenuHeader extends React.Component {
             key: "home",
             title: "Home",
             icon: (active) => (
-                <IconContainer active={active}>
-                    <HomeOutlined style={this.icon_style}/>
-                </IconContainer>
+                <StyledMenuItemWrapper>
+                    <IconContainer active={active}>
+                        <HomeOutlined style={this.icon_style}/>
+                    </IconContainer>
+                </StyledMenuItemWrapper>
             ),
             route: "/",
         },
@@ -133,9 +121,11 @@ export class MenuHeader extends React.Component {
             key: "matches",
             title: "Matches",
             icon: (active) => (
-                <IconContainer active={active}>
-                    <HeartOutlined style={this.icon_style}/>
-                </IconContainer>
+                <StyledMenuItemWrapper>
+                    <IconContainer active={active}>
+                        <HeartOutlined style={this.icon_style}/>
+                    </IconContainer>
+                </StyledMenuItemWrapper>
             ),
             route: "/matches",
         },
@@ -143,9 +133,11 @@ export class MenuHeader extends React.Component {
             key: "messages",
             title: "Messages",
             icon: (active) => (
-                <IconContainer active={active}>
-                    <MessageOutlined style={this.icon_style}/>
-                </IconContainer>
+                <StyledMenuItemWrapper>
+                    <IconContainer active={active}>
+                        <MessageOutlined style={this.icon_style}/>
+                    </IconContainer>
+                </StyledMenuItemWrapper>
             ),
             route: "/messages",
         },

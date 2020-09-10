@@ -18,14 +18,10 @@ export const headerRightWrapper = css`
 export const headerItem = css`
     display: inline-block;
     height: 100%;
-    padding: 0 16px;
     cursor: pointer;
     transition: all 0.3s;
     > i {
         vertical-align: middle;
-    }
-    &:hover {
-        background: rgba(0, 0, 0, 0.025);
     }
     .avatar {
         margin-right: 8px;
@@ -33,6 +29,6 @@ export const headerItem = css`
 `;
 
 export const customAvatar = css`
-    ${headerItem};
-    margin-left: auto;
+    padding: 0 16px;
 `;
+
