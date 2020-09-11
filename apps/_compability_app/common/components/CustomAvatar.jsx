@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 import styled from "@emotion/styled";
-import { Avatar } from "antd"
 import React from "react";
 import { useIntl } from "react-intl";
+import {UserAvatar} from "./UserAvatar";
 
 const UserName = styled.span`
     padding-right: 12px;
@@ -24,12 +24,7 @@ export const CustomAvatar = ({auth}) => {
                         : intl.formatMessage({id: 'baselayout.menuheader.GuestUsername'})
                 }
             </UserName>
-            <Avatar
-                size="small"
-                src={avatarUrl}
-                alt={intl.formatMessage({id: 'Avatar'})}
-                className="avatar"
-            />
+            <UserAvatar size="small"/>
         </div>
     )
 }

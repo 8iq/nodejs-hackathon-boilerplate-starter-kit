@@ -10,7 +10,7 @@ import {
 } from 'antd'
 
 import { AuthLayout } from '../../common/containers'
-import Translate from '../../common/components/Translate'
+import {Translate} from '../../common/components'
 
 export default function DiscTest({disc_data}) {
     const [form] = Form.useForm()

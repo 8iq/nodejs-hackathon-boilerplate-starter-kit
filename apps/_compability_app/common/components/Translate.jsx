@@ -1,7 +1,7 @@
 import * as React from "react"
 import { useIntl } from '@core/next/intl';
 
-function Translate(props) {
+export function Translate(props) {
     const intl = useIntl()
 
     return (
@@ -10,5 +10,3 @@ function Translate(props) {
         </React.Fragment>
     )
 }
-
-export default Translate;

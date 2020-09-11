@@ -1,9 +1,10 @@
 /** @jsx jsx */
 import * as React from "react";
+import { withRouter } from 'next/router'
 import {jsx} from '@emotion/core'
 import {Dropdown, Menu, Spin} from 'antd'
 import {useIntl} from 'react-intl'
-import {HeartOutlined, HomeOutlined, LogoutOutlined, MessageOutlined} from '@ant-design/icons'
+import {TeamOutlined, HomeOutlined, LogoutOutlined, MessageOutlined} from '@ant-design/icons'
 import {useAuth} from '@core/next/auth'
 import Router from "next/router";
 
@@ -37,12 +38,23 @@ const UserInfo = () => {
 };
 
 
-export class MenuHeader extends React.Component {
-    state = {
-        active: "home"
-    };
+export class AppNavigation extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            active: props.router.pathname
+        }
+    }
+
+    static getDerivedStateFromProps(props) {
+        return {
+            active: props.router.pathname
+        }
+    }
 
     render() {
+        console.log(this.state, this.props.router);
         if (this.props.loading) {
             return (
                 <div css={headerRightWrapper}>
@@ -106,7 +118,7 @@ export class MenuHeader extends React.Component {
 
     routes_config = [
         {
-            key: "home",
+            key: "/",
             title: "Home",
             icon: (active) => (
                 <StyledMenuItemWrapper>
@@ -118,19 +130,19 @@ export class MenuHeader extends React.Component {
             route: "/",
         },
         {
-            key: "matches",
+            key: "/matches",
             title: "Matches",
             icon: (active) => (
                 <StyledMenuItemWrapper>
                     <IconContainer active={active}>
-                        <HeartOutlined style={this.icon_style}/>
+                        <TeamOutlined style={this.icon_style}/>
                     </IconContainer>
                 </StyledMenuItemWrapper>
             ),
             route: "/matches",
         },
         {
-            key: "messages",
+            key: "/messages",
             title: "Messages",
             icon: (active) => (
                 <StyledMenuItemWrapper>
@@ -143,3 +155,5 @@ export class MenuHeader extends React.Component {
         },
     ];
 }
+
+export const Navigation = withRouter(AppNavigation);
