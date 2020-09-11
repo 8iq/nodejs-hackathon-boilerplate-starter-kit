@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "@emotion/styled";
-import LogoImage from "../../assets/logotip_version2.png";
+import LogoImage from "../../assets/logo_v2.png";
 const Container = styled.div`
     margin: auto;
     max-width: 1024px;

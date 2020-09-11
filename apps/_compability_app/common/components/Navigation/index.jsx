@@ -54,7 +54,6 @@ export class AppNavigation extends React.Component {
     }
 
     render() {
-        console.log(this.state, this.props.router);
         if (this.props.loading) {
             return (
                 <div css={headerRightWrapper}>
