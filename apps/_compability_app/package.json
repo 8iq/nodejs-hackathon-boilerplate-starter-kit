@@ -34,12 +34,16 @@
     "get-contrast": "^2.0.0",
     "graphql": "^15.3.0",
     "graphql-tag": "^2.11.0",
+    "immutable": "^4.0.0-rc.12",
     "lodash": "^4.17.20",
     "next": "^9.5.2",
     "next-images": "^1.4.1",
     "react": "^16.13.1",
+    "react-chat-elements": "^10.10.2",
     "react-dom": "^16.13.1",
-    "react-intl": "^5.7.1"
+    "react-intl": "^5.7.1",
+    "socket.io": "^2.3.0",
+    "socket.io-client": "^2.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",

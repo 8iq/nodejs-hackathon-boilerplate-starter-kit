@@ -26,9 +26,9 @@ const topMenuCss = css`
 const mainContentCss = css`
     display:flex;
     flex-direction:column;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     padding: 24px;
-    height: 100%;
     max-width: 1024px;
     background: none;
     z-index: 2;

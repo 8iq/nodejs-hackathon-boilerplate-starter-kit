@@ -44,4 +44,4 @@ function getApolloClientConfig() {
     }
 }
 
-export default withApollo({ ssr: true, getApolloClientConfig })(withIntl({ ssr: true, messagesImporter })(withAuth({ ssr: false })(MyApp)))
+export default withApollo({ ssr: true, getApolloClientConfig })(withIntl({ ssr: true, messagesImporter, hideErrors: true })(withAuth({ ssr: false })(MyApp)))

@@ -6,7 +6,6 @@ import {Dropdown, Menu, Spin} from 'antd'
 import {useIntl} from 'react-intl'
 import {TeamOutlined, HomeOutlined, LogoutOutlined, MessageOutlined} from '@ant-design/icons'
 import {useAuth} from '@core/next/auth'
-import Router from "next/router";
 
 import {CustomAvatar} from "../CustomAvatar";
 import {customAvatar, headerRightWrapper, addition_menu_style} from "./styles"
@@ -88,7 +87,7 @@ export class AppNavigation extends React.Component {
                 return;
             }
 
-            Router.push(route_config.route);
+            this.props.router.push(route_config.route);
         });
     };
 
