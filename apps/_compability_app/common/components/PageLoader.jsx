@@ -39,12 +39,10 @@ const Loader = styled('div')`
     }
 `
 
-function PageLoader () {
+export function PageLoader () {
     return (
         <LoaderContainer>
             <Loader/>
         </LoaderContainer>
     )
 }
-
-export default PageLoader

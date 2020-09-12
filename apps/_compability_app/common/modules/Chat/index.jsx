@@ -21,11 +21,7 @@ export class Chat extends React.Component {
     };
 
     componentDidMount() {
-        this.chat_service
-            .init()
-            .then(() => {
-                this.listener_id = this.chat_service.subscribe(this.listen);
-            })
+        this.listener_id = this.chat_service.subscribe(this.listen)
     }
 
     componentWillUnmount() {

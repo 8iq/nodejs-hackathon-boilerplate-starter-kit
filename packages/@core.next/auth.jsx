@@ -28,7 +28,7 @@ const userFragment = `
   isAdmin
 `
 
-let USER_QUERY = gql`
+export let USER_QUERY = gql`
     query {
         authenticatedUser {
             ${userFragment}
@@ -139,7 +139,7 @@ const AuthProvider = ({ children, initialUserValue }) => {
 
 if (DEBUG_RERENDERS_BY_WHY_DID_YOU_RENDER) AuthProvider.whyDidYouRender = true
 
-const initOnRestore = async (ctx) => {
+export const initOnRestore = async (ctx) => {
     let user
     const isOnServerSide = typeof window === 'undefined'
     try {
@@ -155,8 +155,8 @@ const initOnRestore = async (ctx) => {
         console.error('Error while running `withAuth`', error)
         user = null
     }
-    return { user }
-}
+    return {user}
+};
 
 const withAuth = ({ ssr = false, ...opts } = {}) => PageComponent => {
     // TODO(pahaz): refactor it. No need to patch globals here!
