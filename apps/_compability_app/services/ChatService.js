@@ -1,14 +1,16 @@
+import { injectable } from "inversify";
 import socketIOClient from 'socket.io-client'
 
 const CHAT_URL = process.env.chat_url || 'http://localhost:8000/';
 
+@injectable()
 export class ChatService {
     init() {
         return new Promise((res) => {
             this.socket = socketIOClient(CHAT_URL);
             this.socket.on('connect', () => {
                 this.listen();
-                res(this)
+                res()
             });
         });
     }

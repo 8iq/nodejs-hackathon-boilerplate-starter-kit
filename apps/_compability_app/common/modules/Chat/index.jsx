@@ -3,7 +3,7 @@ import * as React from "react";
 import {Input} from "antd";
 import {MessageList} from "react-chat-elements";
 import {ChatContainer, InputContainer, MessageWindow} from "./components"
-import {ChatService} from "./chat_service";
+import {Services, Types} from "../../../services";
 import {List} from "immutable";
 
 function createMessage(text) {
@@ -21,11 +21,10 @@ export class Chat extends React.Component {
     };
 
     componentDidMount() {
-        new ChatService()
+        this.chat_service
             .init()
-            .then((chat_service) => {
-                this.chat_service = chat_service;
-                this.listener_id = chat_service.subscribe(this.listen);
+            .then(() => {
+                this.listener_id = this.chat_service.subscribe(this.listen);
             })
     }
 
@@ -77,6 +76,6 @@ export class Chat extends React.Component {
         this.messagesEnd.scrollIntoView({ behavior: "smooth" });
     };
 
-    chat_service = null;
+    chat_service = Services.get(Types.ChatService);
     listener_id = null
 }

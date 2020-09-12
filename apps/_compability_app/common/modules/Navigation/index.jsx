@@ -7,7 +7,7 @@ import {useIntl} from 'react-intl'
 import {TeamOutlined, HomeOutlined, LogoutOutlined, MessageOutlined} from '@ant-design/icons'
 import {useAuth} from '@core/next/auth'
 
-import {CustomAvatar} from "../CustomAvatar";
+import {CustomAvatar} from "../../components/CustomAvatar";
 import {customAvatar, headerRightWrapper, addition_menu_style} from "./styles"
 import {IconContainer, StyledMenuItemWrapper} from "./components";
 

@@ -2,7 +2,7 @@ import * as React from "react";
 import styled from "@emotion/styled";
 import Background from "../../../assets/bg.jpg";
 import {useAuth} from "@core/next/auth";
-import {UserAvatar} from "../UserAvatar";
+import {UserAvatar} from "../../components/UserAvatar";
 import {Typography} from "antd";
 import {TeamOutlined, FileTextOutlined, MessageOutlined, DingtalkOutlined} from '@ant-design/icons'
 import { useRouter } from 'next/router'

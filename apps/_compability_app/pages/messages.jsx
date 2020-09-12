@@ -1,6 +1,6 @@
 import * as React from "react";
 import {AuthLayout, BaseLayout} from "../common/containers";
-import { Chat } from "../modules/chat";
+import { Chat } from "../common/modules/Chat";
 
 function MessagesPages () {
     return (
