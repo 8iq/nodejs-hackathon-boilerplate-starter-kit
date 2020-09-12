@@ -1,5 +1,6 @@
 import { injectable } from "inversify";
-import socketIOClient from 'socket.io-client'
+import socketIOClient from "socket.io-client";
+import { Types, Services } from "./index";
 
 const CHAT_URL = process.env.chat_url || 'http://localhost:8000/';
 
@@ -8,7 +9,7 @@ export class ChatService {
     init() {
         return new Promise((res) => {
             this.socket = socketIOClient(CHAT_URL);
-            this.socket.on('connect', () => {
+            this.socket.on("connect", () => {
                 this.listen();
                 res()
             });
@@ -16,17 +17,34 @@ export class ChatService {
     }
 
     listen = () => {
-        this.socket.on('chat message', (msg) => {
+        this.socket.on("chat message", (msg) => {
             for (const [,subscriber] of this.subscribers) {
                 if (typeof subscriber === "function") {
                     subscriber(msg)
                 }
             }
         })
-    }
+    };
 
     send(message) {
-        this.socket.emit("chat message", message);
+        const user = this.user_service.getCurrentUser();
+        let generated_message = null;
+
+        switch (typeof message) {
+            case "string": {
+                generated_message = {
+                    user_id: user.getId(),
+                    user_name: user.getName(),
+                };
+                break;
+            }
+            default:
+                break;
+        }
+
+        if (generated_message) {
+            this.socket.emit("chat message", message);
+        }
     }
 
     subscribe(callback) {
@@ -44,6 +62,7 @@ export class ChatService {
         this.subscribers.delete(id);
     };
 
+    socket = null;
     subscribers = new Map();
-    socket = null
+    user_service = Services.get(Types.UserService)
 }
