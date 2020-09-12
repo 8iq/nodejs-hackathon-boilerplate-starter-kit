@@ -35,6 +35,8 @@ export class ChatService {
                 generated_message = {
                     user_id: user.getId(),
                     user_name: user.getName(),
+                    payload: message,
+                    date: new Date(),
                 };
                 break;
             }
@@ -43,7 +45,7 @@ export class ChatService {
         }
 
         if (generated_message) {
-            this.socket.emit("chat message", message);
+            this.socket.emit("chat message", generated_message);
         }
     }
 

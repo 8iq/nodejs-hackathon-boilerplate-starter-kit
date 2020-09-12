@@ -6,7 +6,7 @@ class User {
     constructor(user) {
         this.name = user.name;
         this.id = user.id;
-        this.avatar = user.avatar.publicUrl;
+        this.avatar = user.avatar?.publicUrl;
         this.isAdmin = user.isAdmin;
     }
 

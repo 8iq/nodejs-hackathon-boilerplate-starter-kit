@@ -1,7 +1,7 @@
-const server = require('http').createServer();
+const server = require("http").createServer();
 
-const io = require('socket.io')(server, {
-    path: '/',
+const io = require("socket.io")(server, {
+    path: "/",
     serveClient: false,
     // below are engine.IO options
     pingInterval: 10000,
