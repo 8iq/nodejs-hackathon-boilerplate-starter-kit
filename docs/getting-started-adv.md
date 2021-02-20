@@ -233,28 +233,6 @@ node ./bin/run-multiple-apps @app/ex02back @app/ex02front @app/ex03sockeio
 
 Every app should have `multi-app-support.js` file. Check `ex02back`, `ex02front` and `ex02sockio` examples.
 
-## linter
-
-We use [eslint](https://eslint.org) as our linter. It enforces code-style and best-practices
-
-We don't allow bad code into the repo. To ensure this we run [eslint](https://eslint.org) on `CI`.
-
-The configuration for the [eslint](https://eslint.org) is found under `package.json`
-
-**Available CLI-commands:**
-
- - `yarn lint` lint whole project <- this command runs on CI
- - `yarn run eslint <directory>` check files in `<directory>`
- - `yarn run eslint --fix <directory>` check files in `<directory>` and fix them if possible
-
-**Editor integrations:**
-
-[Webstorm integration:](https://plugins.jetbrains.com/plugin/7494-eslint)
-
-[VSCode integration:](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-
-[Other editors](https://eslint.org/docs/user-guide/integrations#editors)
-
 ## Tips
 
 ### yarn add
