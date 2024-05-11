@@ -22,6 +22,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: install packages
-        run: yarn
+        run: |
+          corepack enable
+          yarn init -2
+          yarn set version stable
+          yarn install
       - name: BUILD
         run: yarn lint
