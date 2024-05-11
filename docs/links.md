@@ -1,6 +1,6 @@
 # Learn
 
-0. You should have a [basic knowledge](https://htmlacademy.org/courses/html-css-basics/intro/html) about [HTML/CSS](https://www.internetingishard.com/html-and-css/) 
+0. You should have a [basic knowledge](https://htmlacademy.org/courses/html-css-basics/intro/html) about [HTML/CSS](https://www.internetingishard.com/html-and-css/)
 1. You should know [Modern JavaScript](https://javascript.info/)
 2. You should know [GraphQL](https://graphql.org/)
 
@@ -23,6 +23,6 @@
 
 # Philosophy
 
- 1) BACKEND: You write domain models and services on backend side (it's better if each service have only one action)
- 2) TESTS: TDD is matter! Tests should work parallel and independently! You should write tests in mind of extensibility (you don't need to rewrite the test if you add extra fields). You can run tests on a remote production API by URL or local development server!
- 3) STYLE: You should follow the common style or change the whole style everywhere (not only in your files)
+1.  BACKEND: You write domain models and services on backend side (it's better if each service have only one action)
+2.  TESTS: TDD is matter! Tests should work parallel and independently! You should write tests in mind of extensibility (you don't need to rewrite the test if you add extra fields). You can run tests on a remote production API by URL or local development server!
+3.  STYLE: You should follow the common style or change the whole style everywhere (not only in your files)

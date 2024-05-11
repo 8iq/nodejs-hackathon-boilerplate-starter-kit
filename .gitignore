@@ -20,7 +20,6 @@
 !.yarn/sdks
 !.yarn/versions
 yarn-error.log
-yarn.lock
 npm-debug.*
 
 # mobile

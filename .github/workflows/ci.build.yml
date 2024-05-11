@@ -24,7 +24,6 @@ jobs:
       - name: install packages
         run: |
           corepack enable
-          yarn init -2
           yarn set version stable
           yarn install
       - name: BUILD

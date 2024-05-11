@@ -9,17 +9,17 @@
 
 **Available CLI-commands:**
 
- - `yarn lint` lint whole project <- this command runs on CI
+- `yarn lint` lint whole project <- this command runs on CI
 
 # Project features and feature requests.
 
 - [x] Monorepo: packages and apps
-- [x] Monorepo: requirements tree : /packages/* and /apps/* depends on /package.json
+- [x] Monorepo: requirements tree : /packages/\* and /apps/\* depends on /package.json
 - [x] Monorepo: reusable UI package example
 - [ ] Monorepo: docs how to add app or package
-- [x] TypeScript support
-- [x] NextJs: init with SSR (app router) + the latest React
-- [x] Antd: init Ant Design support with custom theme
+- [ ] TypeScript support
+- [ ] NextJs: init with SSR (app router) + the latest React
+- [ ] Antd: init Ant Design support with custom theme
 - [ ] CI: run tests
 - [ ] CI: test build
 - [ ] CI: linters
@@ -72,4 +72,4 @@
 - [ ] Bull: scheduled tasks
 - [ ] Logging
 - [ ] DX: command to add new API Schema
-- [ ] DX: command to add new Web and Api app 
+- [ ] DX: command to add new Web and Api app

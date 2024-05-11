@@ -24,8 +24,7 @@ jobs:
       - name: install packages
         run: |
           corepack enable
-          yarn init -2
           yarn set version stable
           yarn install
-      - name: BUILD
-        run: yarn lint
+      - run: yarn format --check
+      - run: yarn lint
