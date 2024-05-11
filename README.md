@@ -4,57 +4,50 @@
 
 # Rapid Development Node.js Hackathon template: [DEMO](https://demo.dok.8iq.dev/)
 
-This template based on [KeystoneJS](https://github.com/keystonejs/keystone) and [Next.js](https://github.com/vercel/next.js).
+This is [KeystoneJS](https://github.com/keystonejs/keystone) and [Next.js](https://github.com/vercel/next.js) base rapid development template.
+Which is time-based tested on the large project.
 
-We also use [Expo](https://github.com/expo/expo) for React based mobile app development.
-[Ant Design](https://github.com/ant-design/ant-design) as React Web UI kit and [UI Kitten](https://github.com/akveo/react-native-ui-kitten) as React Native UI kit 
-
-KeystoneJS is just a glue between [Express](https://github.com/expressjs/express), 
-[ApolloGraphql](https://github.com/apollographql/), Mongoose/Knex/Prisma (as ORM).
-
-Next.js is just a zero config React based framework.
+We use: Prisma, Apollo GraphQL
 
 ### Contents
 
-* [Motivation & Features](#why)
-* [Getting started](docs/getting-started.md)
-* [Deploy](docs/deploy.md)
-* [Contibuting](docs/contributing.md)
+- [Motivation & Features](#why)
+- [Getting started](docs/getting-started.md)
+- [Deploy](docs/deploy.md)
+- [Contributing](docs/contributing.md)
 
 ## Why?
 
-Javascript ecosystem is full of tutorials, open-source and helpful materials,
-but still, it's often **up to the developer** to implement such **basic** features like:
-* Authentication workflow (register-login-reset)
-* Permission mechanism
-* Import/Export
-* Logic reusability between web and mobile
-* And more
+When you start a new project, you need a time-tested approach to development.
+You need to prepare the basic structure of the project, implement registration and authorization.
 
-This project provides you with these basic features, allowing you to focus on core business logic 
+If you are making a B2B solution, you need to implement roles and access rights and the possibility of invites.
 
-Our primary focus is startup developers and hackaton teams
+You need to implement notifications, page templates, and internationalization support.
+
+Using a template, you don't have to spend hours choosing technologies and gluing them together.
+
+The libraries used can be changed over time.
+
+Don't start by choosing a technology, start implement your key features!
+
+Our focus is to use the technologies that allow you to save your time and maximize your development experience.
+
+You can use this project if you are going to launch a new startup or participate in a hackathon.
 
 ## Features
 
-**VERSION**: 0.0.1 **𝛼**
+- Auth flow
+  - Registration
+  - Authentication and Authorization
+  - Change password
+  - Reset password
+- Organization entity
+  - Management of organization members
+  - Invite users
+- Ant design based frontend
 
-* Based on ApolloGraphql, KeystoneJS and NextJS
-* Auth flow
-  * Registration
-  * Authentication and Authorization
-  * Change password
-  * Reset password
-* Organization entity
-  * Management of organization members
-  * Invite users
-  * Import users from excel
-* Ant design based frontend
-* A lot of examples — check /apps
-* Pluggable — use only what you need
-* Deployable — check [deploy.md](docs/deploy.md)
-
-Full list of features and requested features is found under [contibuting.md](docs/contributing.md) and issues
+Full list of features and requested features is found under [contributing.md](docs/contributing.md) and issues
 
 ## Getting started
 
@@ -63,7 +56,3 @@ Check [getting-started.md](docs/getting-started.md)
 ## Deploying
 
 Check [deploy.md](docs/deploy.md)
-
-## Contributing
-
-Check [contributing.md](docs/contributing.md)

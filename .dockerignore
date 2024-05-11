@@ -11,8 +11,9 @@
 **/dist
 **/out
 **/.idea
+**/.vscode
 **/.kmigrator
+**/.turbo
 **/docs
 **/.config
-**/.yarn
 **/.cache

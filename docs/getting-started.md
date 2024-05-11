@@ -1,4 +1,4 @@
-# Init your own monorepo Fork
+# Init your own monorepo
 
 You should have `docker-compose`, `git` and `node` commands.
 You can create a fork of [boilerplate](https://github.com/8iq/nodejs-hackathon-boilerplate-starter-kit) by click on github `Use Template` button or fork the repo.
@@ -16,11 +16,4 @@ yarn
 
 # Create new application
 
-```bash
-# 4) run create app command
-yarn createapp APPNAME
-
-# 5) follow the README quick start (check ./apps/APPNAME/ folder)
-```
-
-[continue to some advanced topics](getting-started-adv.md)
+TODO

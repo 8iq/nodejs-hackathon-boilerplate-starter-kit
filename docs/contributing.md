@@ -7,118 +7,69 @@
 
 ## linter
 
-We use [eslint](https://eslint.org) as our linter. It enforces code-style and best-practices
-
-We don't allow bad code into the repo. To ensure this we run [eslint](https://eslint.org) on `CI`.
-
-The configuration for the [eslint](https://eslint.org) is found under `package.json`
-
 **Available CLI-commands:**
 
- - `yarn lint` lint whole project <- this command runs on CI
- - `yarn run eslint <directory>` check files in `<directory>`
- - `yarn run eslint --fix <directory>` check files in `<directory>` and fix them if possible
-
-**Editor integrations:**
-
-[Webstorm integration:](https://plugins.jetbrains.com/plugin/7494-eslint)
-
-[VSCode integration:](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-
-[Other editors](https://eslint.org/docs/user-guide/integrations#editors)
-
+- `yarn lint` lint whole project <- this command runs on CI
 
 # Project features and feature requests.
 
-Features that aren't checked are available to take
-
- - [x] docs: how-to create frontend app 
- - [x] docs: how-to write backend app
- - [x] docs: how-to write mobile app
- - [x] docs: how-to upgrade packages versions
- - [x] docs: how-to use with postgres
- - [ ] docs: how-to debug react rerenders
- - [ ] docs: how-to use phone verification by firebase!
- - [x] docs: how-to deploy to dokku / heroku
- - [ ] docs: how-to write reusable components (mobile + web + ssr)
- - [x] example: Ant Design Pro + Next.js
- - [x] example: Internationalization (react-intl)
- - [ ] example: Upload Attachments Antd Form
- - [x] ForgotUserPassword: Schema, API, Tests
- - [x] ForgotUserPassword: Page (example)
- - [x] ForgotUserPassword: Email notification hook
- - [ ] ForgotUserPassword: Options captcha support
- - [x] ChangePassword: Schema, API, Tests
- - [x] ChangePassword: Page (example)
- - [x] Auth: Schema, API, Test
- - [x] Auth: SignIn/SignOut Page (example)
- - [x] Auth: SignIn next url support
- - [x] Auth: AuthRequired component
- - [x] Auth: ByPhone (API, example)
- - [ ] Auth: Options captcha support
- - [x] User: Schema, API, Tests
- - [x] Organization: CRUD: Schema, API, Tests
- - [x] Organization: CRUD: Page (example)
- - [x] Organization: required to select Organization component
- - [x] Organization: invite user by email: Schema, API, Tests
- - [x] Organization: invite user by email for existing emails: Page (example)
- - [ ] Organization: invite user by email for new emails: Page (example)
- - [x] Organization: invited users list: Page (example)
- - [x] Organization: bulk invite from excel file: Page (example)
- - [x] Organization: accept/reject invites: Schema, API, Tests
- - [x] Organization: accept/reject invites: Page (example)
- - [x] User: reusable customization (like django.auth.user)
- - [ ] User: unique phone/email check (for mongo/postgres)! 
- - [x] Register: Schema, API, Test
- - [x] Register: Page (example)
- - [x] Register: ByPhone (API, example)
- - [ ] Register: Email verification (isEmailVerified)
- - [x] Register: Phone verification (isPhoneVerified)
- - [ ] Register: Extensibility (like django-registrations)
- - [ ] Register: Options captcha support
- - [ ] Register: Phone verification (example)
- - [x] Layout: Extensible base layout
- - [x] Layout: Mobile first support
- - [x] Layout: FormList container (container for list of items)
- - [x] Layout: FormTable container (container for table items)
- - [x] Layout: Excel export container (container for exporting excel data)
- - [ ] Layout: Dark mode (theme)
- - [ ] Layout: Antd compatible theme example (global variables for padding/margin/colors)
- - [ ] Layout: change site language widget
- - [ ] docs: project structure
- - [x] docs: Deploy
- - [ ] docs: step by step create new project example (like Next.js, like Django app)
- - [ ] UserNotifications: Schema, API, Tests
- - [ ] UserNotifications: Page (example 05 top menu) 
- - [ ] UserProfileSettings: Schema, API, Tests
- - [ ] UserProfileSettings: Page (example 05 user profile page)
- - [ ] UserProfileSettings: Extensibility
- - [ ] GlobalSettings: Schema, API, Tests
- - [ ] GlobalSettings: Admin and example
- - [ ] Core: Upload files
- - [ ] Core: https://www.apollographql.com/docs/apollo-server/data/errors/ (should be the same format for strings: \[part1:field:detail]) 
- - [ ] Core: Realtime update support (gql Subscriptions example) https://www.apollographql.com/docs/apollo-server/data/subscriptions/ example
- - [x] Core: Monorepo with packages and apps
- - [x] Core: Multiple express backend support 
- - [x] Core: docker-compose
- - [x] Core: CI Tests
- - [ ] Core: CI Deploy
- - [ ] Core: CI Mobile app
- - [x] Core: Internationalization (react-intl)
- - [x] Core: SSR (by Next.js)
- - [x] Core: SSR + Apollo cache (don't query already received data)
- - [x] Core: SSR + Auth (authenticate queries on the server side)
- - [x] Core: SSR + Internationalization (same language as on client side)
- - [ ] Core: KeystoneJS AuthProvider (with isActive check!)
- - [ ] Core: isActive == false (need to kill all user sessions)
- - [ ] Core: Background tasks
- - [ ] Core: Background scheduled tasks
- - [ ] Core: Metrics
- - [ ] Core: Roles and Permissions
- - [ ] Core: Logging
- - [ ] Core: lerna?
- - [ ] Core: benchmarks?
- - [x] Core: linter
- - [ ] Core: Jest + workspace + Next.js (check problems, write examples)
- - Auth my social apps? (https://www.keystonejs.com/keystonejs/auth-passport/)
- - CRDT example?
+- [x] Monorepo: packages and apps
+- [x] Monorepo: requirements tree : /packages/\* and /apps/\* depends on /package.json
+- [x] Monorepo: reusable UI package example
+- [ ] Monorepo: docs how to add app or package
+- [ ] TypeScript support
+- [ ] NextJs: init with SSR (app router) + the latest React
+- [ ] Antd: init Ant Design support with custom theme
+- [ ] CI: run tests
+- [ ] CI: test build
+- [ ] CI: linters
+- [ ] i18n: init internationalization support
+- [ ] i18n: add Antd i18n support
+- [ ] Docker: docker-compose file for deploy and local development
+- [ ] Docker: docker-compose docs
+- [ ] readme: local setup
+- [ ] readme: overview video guide
+- [ ] readme: deploy (deploy.md)
+- [ ] readme: create new app (getting-started.md)
+- [ ] E2E: init tests (framework?)
+- [ ] Migrations: docs how to use it
+- [ ] UploadFiles: Page (example)
+- [ ] User: API, Tests
+- [ ] Organization: API, Tests
+- [ ] Organization: create Page (example)
+- [ ] Organization: OrganizationRequired component
+- [ ] Organization: invite user by email/phone: API, Tests
+- [ ] Organization: invite user by email/phone: Page (example)
+- [ ] Organization: invited users list: Page (example)
+- [ ] Organization: bulk invite from excel file: Page (example)
+- [ ] Organization: accept/reject invites: API, Tests
+- [ ] Organization: accept/reject invites: Page (example)
+- [ ] Auth: API, Test (by email/phone)
+- [ ] Auth: SignIn/SignOut Page (example)
+- [ ] Auth: AuthRequired component
+- [ ] Auth: captcha support
+- [ ] Register: API, Test (by email/phone)
+- [ ] Register: Page (example)
+- [ ] Register: Email/Phone verification
+- [ ] Register: captcha support
+- [ ] ForgotUserPassword: API, Tests
+- [ ] ForgotUserPassword: Page (example)
+- [ ] ForgotUserPassword: Email notification hook
+- [ ] ForgotUserPassword: Options captcha support
+- [ ] ChangePassword: API, Tests
+- [ ] ChangePassword: Page (example)
+- [ ] Permissions: API, Tests
+- [ ] Permissions: Page (example)
+- [ ] Layout: change site language widget
+- [ ] Layout: change organization
+- [ ] UserNotifications: API, Tests
+- [ ] UserNotifications: Page (example from top menu)
+- [ ] UserSettings: Page (example)
+- [ ] Keystone: Realtime update support`
+- [ ] Keystone: folder structure
+- [ ] NextJs: Apollo cache
+- [ ] Bull: init background tasks
+- [ ] Bull: scheduled tasks
+- [ ] Logging
+- [ ] DX: command to add new API Schema
+- [ ] DX: command to add new Web and Api app
