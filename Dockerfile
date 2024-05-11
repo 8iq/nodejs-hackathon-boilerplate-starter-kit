@@ -35,7 +35,10 @@ RUN echo "# Build time .env config!" >> /home/app/.env && \
 	echo "DATABASE_URL=undefined" >> /home/app/.env && \
 	echo "NODE_ENV=production" >> /home/app/.env
 # Cache packages!
-RUN set -ex && yarn install
+RUN set -ex && \
+    && corepack enable \
+    && yarn set version stable \
+    && yarn install
 ADD --chown=app:app . /home/app
 RUN set -ex &&  \
     yarn build && \
