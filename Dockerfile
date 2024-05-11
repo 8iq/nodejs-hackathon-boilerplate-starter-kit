@@ -30,22 +30,29 @@ RUN set -ex \
 # Build container
 FROM base AS build
 WORKDIR /home/app
+
 RUN echo "# Build time .env config!" >> /home/app/.env && \
 	echo "COOKIE_SECRET=undefined" >> /home/app/.env && \
 	echo "DATABASE_URL=undefined" >> /home/app/.env && \
 	echo "NODE_ENV=production" >> /home/app/.env
+
+COPY package*.json ./
+COPY ./yarn.lock ./yarn.lock
+COPY ./.yarn ./.yarn
+COPY ./.yarnrc.yml ./.yarnrc.yml
+
 # Cache packages!
-RUN set -ex && \
+RUN set -ex \
     && corepack enable \
     && yarn set version stable \
-    && yarn install
+    && yarn install --immutable
+
 ADD --chown=app:app . /home/app
+
 RUN set -ex &&  \
     yarn build && \
-    yarn cache clean &&  \
     rm -rf /home/app/.env &&  \
     rm -rf /home/app/.config &&  \
-    rm -rf /home/app/.yarn &&  \
     rm -rf /home/app/.cache && \
     ls -lah /home/app/
 
