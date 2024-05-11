@@ -7,8 +7,7 @@
 ## Server side
 
 1. You know something about [Node.js](https://nodejs.dev/)
-1. You should follow the [KeystoneJS tutorial](https://www.keystonejs.com/tutorials/new-project)
-1. Something about mongo and mongoose
+1. You should follow the [KeystoneJS tutorial](https://keystonejs.com/docs/getting-started)
 
 ## Client side
 
@@ -17,7 +16,7 @@
 
 ## More
 
-1. yarn workspaces: https://classic.yarnpkg.com/en/docs/workspaces/
+1. yarn workspaces: https://yarnpkg.com/features/workspaces
 2. CSS animations: https://css-animations.io/ (base level), https://tympanus.net/codrops/ (pro examples)
 3. JS Egghead.io courses: https://egghead.io/
 4. Docker compose: https://docs.docker.com/compose/
