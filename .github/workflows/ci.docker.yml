@@ -13,11 +13,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+      - name: install packages
+        run: docker-compose build
+
       - name: Setup debug by SSH if failure ci session
         uses: lhotari/action-upterm@v1
         if: ${{ failure() }}
         with:
           wait-timeout-minutes: 5
-
-      - name: install packages
-        run: docker-compose build
