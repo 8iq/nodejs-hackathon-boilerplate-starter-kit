@@ -1,15 +1,8 @@
 [![Hackathon workflow](https://image.shutterstock.com/image-vector/banner-hackathon-design-sprintlike-event-260nw-1418226719.jpg)](https://drive.google.com/drive/folders/1Srw2T91_rRLTWgJc-Zh693hhbD2JS6Yh)
 
-[![Look At Screenshot folder!](https://user-images.githubusercontent.com/1394025/105494912-4cbe4d80-5cdd-11eb-8148-4940c0ce7846.png)](https://drive.google.com/drive/folders/1Srw2T91_rRLTWgJc-Zh693hhbD2JS6Yh)
+What's inside? React + Next.js + Ant + Turbo + react-i18next + Refine  
 
-# Rapid Development Node.js Hackathon template: [DEMO](https://demo.dok.8iq.dev/)
-
-This is [KeystoneJS](https://github.com/keystonejs/keystone) and [Next.js](https://github.com/vercel/next.js) base rapid development template.
-Which is time-based tested on the large project.
-
-We use: Prisma, Apollo GraphQL
-
-### Contents
+# Rapid Development Node.js Hackathon template
 
 - [Motivation & Features](#why)
 - [Getting started](docs/getting-started.md)
@@ -36,16 +29,6 @@ Our focus is to use the technologies that allow you to save your time and maximi
 You can use this project if you are going to launch a new startup or participate in a hackathon.
 
 ## Features
-
-- Auth flow
-  - Registration
-  - Authentication and Authorization
-  - Change password
-  - Reset password
-- Organization entity
-  - Management of organization members
-  - Invite users
-- Ant design based frontend
 
 Full list of features and requested features is found under [contributing.md](docs/contributing.md) and issues
 

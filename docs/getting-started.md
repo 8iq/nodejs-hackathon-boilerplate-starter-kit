@@ -13,7 +13,3 @@ cd my-new-startup
 # 3) Install dependencies and link workspaces
 yarn
 ```
-
-# Create new application
-
-TODO
