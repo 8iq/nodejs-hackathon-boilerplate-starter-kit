@@ -14,12 +14,12 @@
 # Project features and feature requests.
 
 - [x] Monorepo: packages and apps
-- [x] Monorepo: requirements tree : /packages/\* and /apps/\* depends on /package.json
+- [x] Monorepo: requirements tree : /packages/* and /apps/* depends on /package.json
 - [x] Monorepo: reusable UI package example
 - [ ] Monorepo: docs how to add app or package
-- [ ] TypeScript support
-- [ ] NextJs: init with SSR (app router) + the latest React
-- [ ] Antd: init Ant Design support with custom theme
+- [x] Monorepo: TypeScript support
+- [x] NextJs: init with SSR (app router) + React Server Components
+- [x] Antd: init Ant Design support with custom theme
 - [ ] CI: run tests
 - [ ] CI: test build
 - [ ] CI: linters
@@ -29,8 +29,6 @@
 - [ ] Docker: docker-compose docs
 - [ ] readme: local setup
 - [ ] readme: overview video guide
-- [ ] readme: deploy (deploy.md)
-- [ ] readme: create new app (getting-started.md)
 - [ ] E2E: init tests (framework?)
 - [ ] Migrations: docs how to use it
 - [ ] UploadFiles: Page (example)
