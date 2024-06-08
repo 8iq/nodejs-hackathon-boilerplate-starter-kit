@@ -1,4 +1,5 @@
-The internal packages are stored here.
+The internal `packages` are kept in this location. 
 
-These can be UI libraries or auxiliary utilities.
-Everything that can be published in NPM, but is used inside the apps.
+These could be UI libraries or additional tools. 
+They can be published on NPM, but they are only used within 
+the `apps`.

@@ -13,11 +13,12 @@
 
 # Project features and feature requests.
 
-- [x] Monorepo: packages and apps
+- [x] Monorepo: prepare /packages/* and /apps/* folders
 - [x] Monorepo: requirements tree : /packages/* and /apps/* depends on /package.json
-- [x] Monorepo: reusable UI package example
+- [x] Monorepo: reusable UI package example: /packages/ui
 - [ ] Monorepo: docs how to add app or package
 - [x] Monorepo: TypeScript support
+- [x] Monorepo: add README.md for all packages
 - [x] NextJs: init with SSR (app router) + React Server Components
 - [x] Antd: init Ant Design support with custom theme
 - [ ] CI: run tests

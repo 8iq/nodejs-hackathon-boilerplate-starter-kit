@@ -8,4 +8,3 @@
 - https://github.com/refinedev/refine/blob/master/packages/core/src/contexts/i18n/index.tsx - refine i18n
 - https://github.com/vercel/turbo/blob/main/examples/basic/apps/web/app/page.tsx - Turborepo start for Next.JS
 - https://github.com/refinedev/refine/blob/master/documentation/docs/routing/integrations/next-js/index.md#authentication - Auth + Next + Refine
-
