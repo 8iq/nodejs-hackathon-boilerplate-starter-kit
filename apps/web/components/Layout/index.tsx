@@ -12,8 +12,8 @@ export const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
     // ThemedLayoutV2: https://refine.dev/docs/ui-integrations/ant-design/components/themed-layout/
     // Header: https://refine.dev/docs/ui-integrations/ant-design/components/themed-layout/#header
     <ThemedLayoutV2
-      Header={() => <Header/>}
-      Title={({ collapsed }) => <BrandTitle collapsed={collapsed}/>}
+      Header={() => <Header />}
+      Title={({ collapsed }) => <BrandTitle collapsed={collapsed} />}
     >
       {children}
     </ThemedLayoutV2>

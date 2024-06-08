@@ -3,8 +3,8 @@ import { Avatar as AntdAvatar } from '@repo/ui/general'
 import { FC, memo } from 'react'
 
 type Props = AvatarProps & {
-  name?: string;
-};
+  name?: string
+}
 
 /*
  * generates random colors from  https://ant.design/docs/spec/colors. <color-4> used.

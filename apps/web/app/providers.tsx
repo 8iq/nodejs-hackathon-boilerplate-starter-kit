@@ -29,7 +29,13 @@ const resources: ResourceProps[] = [
   },
 ]
 
-export function Providers ({ children, locale }: { children?: ReactNode, locale: string }) {
+export function Providers({
+  children,
+  locale,
+}: {
+  children?: ReactNode
+  locale: string
+}) {
   const { t, i18n } = useTranslation(DEFAULT_NAMESPACE, { lng: locale })
   const i18nProvider: I18nProvider = {
     translate: (key: string, params) => t(key, params),
@@ -37,12 +43,15 @@ export function Providers ({ children, locale }: { children?: ReactNode, locale:
     getLocale: () => i18n.language,
   }
 
-  return <Refine
-    dataProvider={dataProvider}
-    authProvider={authProvider}
-    notificationProvider={useNotificationProvider}
-    i18nProvider={i18nProvider}
-    resources={resources}>
-    {children}
-  </Refine>
+  return (
+    <Refine
+      dataProvider={dataProvider}
+      authProvider={authProvider}
+      notificationProvider={useNotificationProvider}
+      i18nProvider={i18nProvider}
+      resources={resources}
+    >
+      {children}
+    </Refine>
+  )
 }

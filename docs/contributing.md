@@ -13,8 +13,8 @@
 
 # Project features and feature requests.
 
-- [x] Monorepo: prepare /packages/* and /apps/* folders
-- [x] Monorepo: requirements tree : /packages/* and /apps/* depends on /package.json
+- [x] Monorepo: prepare /packages/\* and /apps/\* folders
+- [x] Monorepo: requirements tree : /packages/\* and /apps/\* depends on /package.json
 - [x] Monorepo: reusable UI package example: /packages/ui
 - [x] Monorepo: docs how to add app or package
 - [x] Monorepo: TypeScript support

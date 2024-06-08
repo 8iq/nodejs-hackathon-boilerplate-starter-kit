@@ -11,7 +11,7 @@ interface QueryProps {
   email?: string
 }
 
-export default function RegisterPage (): React.JSX.Element {
+export default function RegisterPage(): React.JSX.Element {
   const { params } = useParsed<QueryProps>()
   const translate = useTranslate()
 
@@ -25,7 +25,7 @@ export default function RegisterPage (): React.JSX.Element {
     <AuthPage
       type="register"
       formProps={{ initialValues }}
-      title={<BrandTitle collapsed={false}/>}
+      title={<BrandTitle collapsed={false} />}
       providers={[
         {
           name: 'google',
@@ -41,7 +41,7 @@ export default function RegisterPage (): React.JSX.Element {
         },
         {
           name: 'github',
-          label: translate("pages.login.github", 'Sign in with GitHub'),
+          label: translate('pages.login.github', 'Sign in with GitHub'),
           icon: (
             <GithubOutlined
               style={{

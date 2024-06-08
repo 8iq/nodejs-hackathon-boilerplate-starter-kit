@@ -10,7 +10,7 @@ interface QueryProps {
   email?: string
 }
 
-export default function ForgotPasswordPage (): React.JSX.Element {
+export default function ForgotPasswordPage(): React.JSX.Element {
   const { params } = useParsed<QueryProps>()
 
   const emailFromSearchParams = params['email']
@@ -23,7 +23,7 @@ export default function ForgotPasswordPage (): React.JSX.Element {
     <AuthPage
       type="forgotPassword"
       formProps={{ initialValues }}
-      title={<BrandTitle collapsed={false}/>}
+      title={<BrandTitle collapsed={false} />}
     />
   )
 }

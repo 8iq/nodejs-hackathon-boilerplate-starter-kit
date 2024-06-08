@@ -9,5 +9,4 @@ Simple Front-End WEB app example
 
    DOCS: https://refine.dev/docs/data/data-provider/
 
-2. 
-
+2.

@@ -16,65 +16,69 @@ export const CurrentUser: React.FC = () => {
   const name = user?.name || user?.email || 'NoName'
   const avatarUrl = user?.avatarUrl
 
-  const popoverMenu = <div
-    style={{
-      display: 'flex',
-      flexDirection: 'column',
-    }}
-  >
-    <Text
-      strong
-      style={{
-        padding: '12px 20px',
-      }}
-    >
-      {name}
-    </Text>
+  const popoverMenu = (
     <div
       style={{
-        borderTop: '1px solid #d9d9d9',
-        padding: '4px',
         display: 'flex',
         flexDirection: 'column',
-        gap: '4px',
       }}
     >
-      {/*<Button*/}
-      {/*  style={{ textAlign: 'left' }}*/}
-      {/*  icon={<SettingOutlined/>}*/}
-      {/*  type="text"*/}
-      {/*  block*/}
-      {/*  onClick={() => setOpened(true)}*/}
-      {/*>*/}
-      {/*  Account settings*/}
-      {/*</Button>*/}
-      <Button
-        style={{ textAlign: 'left' }}
-        icon={<LogoutOutlined/>}
-        type="text"
-        danger
-        block
-        onClick={() => logout()}
+      <Text
+        strong
+        style={{
+          padding: '12px 20px',
+        }}
       >
-        Logout
-      </Button>
+        {name}
+      </Text>
+      <div
+        style={{
+          borderTop: '1px solid #d9d9d9',
+          padding: '4px',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '4px',
+        }}
+      >
+        {/*<Button*/}
+        {/*  style={{ textAlign: 'left' }}*/}
+        {/*  icon={<SettingOutlined/>}*/}
+        {/*  type="text"*/}
+        {/*  block*/}
+        {/*  onClick={() => setOpened(true)}*/}
+        {/*>*/}
+        {/*  Account settings*/}
+        {/*</Button>*/}
+        <Button
+          style={{ textAlign: 'left' }}
+          icon={<LogoutOutlined />}
+          type="text"
+          danger
+          block
+          onClick={() => logout()}
+        >
+          Logout
+        </Button>
+      </div>
     </div>
-  </div>
+  )
 
-  const popover = <Popover
-    placement="bottomRight"
-    content={popoverMenu}
-    trigger="click"
-    overlayInnerStyle={{ padding: 0 }}
-    overlayStyle={{ zIndex: 999 }}
-  >
-    <CustomAvatar
-      name={name}
-      src={avatarUrl}
-      size="default"
-      style={{ cursor: 'pointer' }}
-    />
-  </Popover>
+  const popover = (
+    <Popover
+      placement="bottomRight"
+      content={popoverMenu}
+      trigger="click"
+      overlayInnerStyle={{ padding: 0 }}
+      overlayStyle={{ zIndex: 999 }}
+    >
+      <CustomAvatar
+        name={name}
+        src={avatarUrl}
+        size="default"
+        style={{ cursor: 'pointer' }}
+      />
+    </Popover>
+  )
 
   return (
     <>

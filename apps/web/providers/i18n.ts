@@ -1,6 +1,15 @@
 'use client'
 
-import { i18next, initReactI18next, LanguageDetector, resourcesToBackend, LOCALE_COOKIE_NAME, DEFAULT_LOCALE, DEFAULT_NAMESPACE, LOCALES } from '@repo/i18n'
+import {
+  i18next,
+  initReactI18next,
+  LanguageDetector,
+  resourcesToBackend,
+  LOCALE_COOKIE_NAME,
+  DEFAULT_LOCALE,
+  DEFAULT_NAMESPACE,
+  LOCALES,
+} from '@repo/i18n'
 
 const runsOnServerSide = typeof window === 'undefined'
 

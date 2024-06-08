@@ -1,7 +1,7 @@
 # Init your own monorepo
 
 You should have `docker-compose`, `git` and `node` commands.
-You can create a fork of [boilerplate](https://github.com/8iq/nodejs-hackathon-boilerplate-starter-kit) 
+You can create a fork of [boilerplate](https://github.com/8iq/nodejs-hackathon-boilerplate-starter-kit)
 by click on GitHub `Use Template` button or fork the repo.
 
 ![use template click](./_img/00-use-template-screen.png)

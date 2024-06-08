@@ -13,7 +13,7 @@ interface QueryProps {
   refreshToken?: string
 }
 
-export default function LoginPage (): React.JSX.Element {
+export default function LoginPage(): React.JSX.Element {
   const { params } = useParsed<QueryProps>()
   const { mutate } = useLogin()
   const translate = useTranslate()
@@ -39,11 +39,11 @@ export default function LoginPage (): React.JSX.Element {
     <AuthPage
       type="login"
       formProps={{ initialValues }}
-      title={<BrandTitle collapsed={false}/>}
+      title={<BrandTitle collapsed={false} />}
       providers={[
         {
           name: 'google',
-          label: translate("pages.login.google", 'Sign in with Google'),
+          label: translate('pages.login.google', 'Sign in with Google'),
           icon: (
             <GoogleOutlined
               style={{
@@ -55,7 +55,7 @@ export default function LoginPage (): React.JSX.Element {
         },
         {
           name: 'github',
-          label: translate("pages.login.github", 'Sign in with GitHub'),
+          label: translate('pages.login.github', 'Sign in with GitHub'),
           icon: (
             <GithubOutlined
               style={{

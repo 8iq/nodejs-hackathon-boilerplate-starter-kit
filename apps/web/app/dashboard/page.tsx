@@ -5,8 +5,7 @@ import React from 'react'
 
 import { Layout } from 'web/components/Layout'
 
-
-export default async function DashboardPage (): Promise<React.JSX.Element> {
+export default async function DashboardPage(): Promise<React.JSX.Element> {
   return (
     <Layout>
       <Show headerButtons={[]}>

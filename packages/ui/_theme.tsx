@@ -6,9 +6,12 @@ import React, { useState } from 'react'
 // https://ant.design/components/app#sequence-with-configprovider
 // https://ant.design/components/config-provider
 // https://github.com/refinedev/refine/blob/master/examples/with-nextjs/src/contexts/color-mode/index.tsx#L27
-export function ThemeProvider ({ children, defaultMode }: Readonly<{
+export function ThemeProvider({
+  children,
+  defaultMode,
+}: Readonly<{
   defaultMode?: string
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   const [mode, setMode] = useState(defaultMode)
 

@@ -10,7 +10,7 @@ export { AuthPage } from '@refinedev/antd'
 
 // https://github.com/refinedev/refine/blob/master/examples/with-nextjs/src/app/layout.tsx#L36
 // https://ant.design/docs/react/use-with-next#using-app-router
-export function Refine ({ children, ...props }: RefineProps): React.JSX.Element {
+export function Refine({ children, ...props }: RefineProps): React.JSX.Element {
   const theme = 'dark'
   return (
     // (client only) https://github.com/ant-design/nextjs-registry/blob/main/src/AntdRegistry.tsx
@@ -28,7 +28,7 @@ export function Refine ({ children, ...props }: RefineProps): React.JSX.Element 
             {...props}
           >
             {children}
-            <RefineKbar/>
+            <RefineKbar />
           </BaseRefine>
           {/*  </DevtoolsProvider>*/}
         </ThemeProvider>

@@ -1,6 +1,10 @@
 'use client'
 
-import { useGetIdentity, useIsAuthenticated, useLink } from '@repo/ui/refine/core'
+import {
+  useGetIdentity,
+  useIsAuthenticated,
+  useLink,
+} from '@repo/ui/refine/core'
 import React from 'react'
 
 import { Layout, Space, theme } from '@repo/ui/general'
@@ -32,7 +36,7 @@ export const Header: React.FC = () => {
     <BaseHeader style={headerStyles}>
       <Space>
         {/*<Notifications/>*/}
-        {isAuthenticated ? <CurrentUser/> : null}
+        {isAuthenticated ? <CurrentUser /> : null}
         {!isAuthenticated ? <Link to={'login'}>Login</Link> : null}
       </Space>
     </BaseHeader>

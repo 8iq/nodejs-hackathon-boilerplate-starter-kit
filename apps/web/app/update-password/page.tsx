@@ -5,11 +5,8 @@ import React from 'react'
 
 import { BrandTitle } from 'web/components/BrandTitle'
 
-export default function UpdatePasswordPage (): React.JSX.Element {
+export default function UpdatePasswordPage(): React.JSX.Element {
   return (
-    <AuthPage
-      type="updatePassword"
-      title={<BrandTitle collapsed={false}/>}
-    />
+    <AuthPage type="updatePassword" title={<BrandTitle collapsed={false} />} />
   )
 }
