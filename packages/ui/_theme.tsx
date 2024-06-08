@@ -17,7 +17,7 @@ export function ThemeProvider ({ children, defaultMode }: Readonly<{
     token: {
       // Seed Token
       colorPrimary: '#ff1e56',
-      colorLink: '#eee7e7',
+      colorLink: mode === 'light' ? '#3f3c3c' : '#eee7e7',
       borderRadius: 2,
     },
   }

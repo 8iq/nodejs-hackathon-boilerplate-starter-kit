@@ -33,7 +33,6 @@
     position: relative;
     margin: 0;
     padding: 1rem;
-    background-color: rgba(var(--callout-rgb), 0.5);
     border: 1px solid rgba(var(--callout-border-rgb), 0.3);
     border-radius: var(--border-radius);
 }
@@ -98,15 +97,6 @@
     background: rgba(var(--card-rgb), 0);
     border: 1px solid rgba(var(--card-border-rgb), 0);
     transition: background 200ms, border 200ms;
-}
-
-.grid a {
-    color: white;
-}
-
-.grid a:hover {
-    color: white;
-    text-decoration: none;
 }
 
 .card span {

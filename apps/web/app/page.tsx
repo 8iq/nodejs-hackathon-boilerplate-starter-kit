@@ -1,6 +1,7 @@
 'use server'
 
 import { getLocale, getServerTranslate } from '@repo/i18n/server'
+import { Layout } from '@repo/ui/general'
 import Image from 'next/image'
 import React from 'react'
 
@@ -131,7 +132,7 @@ function CardLinks (): React.JSX.Element {
 
 export default async function Page (): Promise<React.JSX.Element> {
   return (
-    <main className={styles.main}>
+    <Layout className={styles.main}>
       {/*<NavigateToResource/>*/}
 
       <Head/>
@@ -139,6 +140,6 @@ export default async function Page (): Promise<React.JSX.Element> {
       <CardLinks/>
       <FormExample/>
 
-    </main>
+    </Layout>
   )
 }

@@ -1,7 +1,7 @@
 import { dir, getLocale } from '@repo/i18n/server'
 import { Inter } from 'next/font/google'
 
-// import './globals.css'
+import './globals.css'
 import React from 'react'
 import { Providers } from './providers'
 
