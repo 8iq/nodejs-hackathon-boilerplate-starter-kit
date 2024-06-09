@@ -1,7 +1,7 @@
 'use client'
 
 import { DEFAULT_NAMESPACE, useTranslation } from '@repo/i18n'
-import { Refine } from '@repo/ui/refine'
+import { ThemedRefine } from '@repo/ui/refine'
 import { useNotificationProvider } from '@repo/ui/refine/antd'
 import { I18nProvider, ResourceProps } from '@repo/ui/refine/core'
 import { ReactNode } from 'react'
@@ -32,9 +32,11 @@ const resources: ResourceProps[] = [
 export function Providers({
   children,
   locale,
+  theme,
 }: {
   children?: ReactNode
   locale: string
+  theme: 'dark' | 'light'
 }) {
   const { t, i18n } = useTranslation(DEFAULT_NAMESPACE, { lng: locale })
   const i18nProvider: I18nProvider = {
@@ -44,7 +46,8 @@ export function Providers({
   }
 
   return (
-    <Refine
+    <ThemedRefine
+      theme={theme}
       dataProvider={dataProvider}
       authProvider={authProvider}
       notificationProvider={useNotificationProvider}
@@ -52,6 +55,6 @@ export function Providers({
       resources={resources}
     >
       {children}
-    </Refine>
+    </ThemedRefine>
   )
 }

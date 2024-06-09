@@ -13,11 +13,12 @@ export default async function RootLayout({
   children: React.ReactNode
 }): Promise<React.JSX.Element> {
   const locale = await getLocale()
+  const theme = 'dark'
 
   return (
     <html lang={locale} dir={dir(locale)}>
       <body className={inter.className}>
-        <Providers locale={locale}>{children}</Providers>
+        <Providers locale={locale} theme={theme}>{children}</Providers>
       </body>
     </html>
   )
