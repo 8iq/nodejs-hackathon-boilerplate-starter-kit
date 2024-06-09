@@ -11,17 +11,14 @@ import {
   LOCALES,
 } from '@repo/i18n'
 
+import { IMPORTER } from './importer'
+
 const runsOnServerSide = typeof window === 'undefined'
 
 i18next
   .use(initReactI18next)
   .use(LanguageDetector)
-  .use(
-    resourcesToBackend(
-      (language: string, namespace: string) =>
-        import(`../public/locales/${language}/${namespace}.json`),
-    ),
-  )
+  .use(resourcesToBackend(IMPORTER))
   .init({
     // debug: true,
     lng: undefined, // let detect the language on client side

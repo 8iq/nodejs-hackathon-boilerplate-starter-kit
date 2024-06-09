@@ -4,23 +4,37 @@ import { cookies, headers } from 'next/headers'
 import { initReactI18next } from 'react-i18next/initReactI18next'
 import acceptLanguage from 'accept-language'
 
-import { DEFAULT_LOCALE, LOCALE_COOKIE_NAME, LOCALES } from './config'
+import {
+  DEFAULT_LOCALE,
+  DEFAULT_NAMESPACE,
+  LOCALE_COOKIE_NAME,
+  LOCALES,
+} from './config'
+
+type Importer = (
+  language: string,
+  namespace: string,
+) => Promise<string | boolean | null | undefined>
 
 acceptLanguage.languages(LOCALES)
-const IMPORTER = (language: string, namespace: string) =>
-  import(`${process.cwd()}/public/locales/${language}/${namespace}.json`)
 
 // based on: https://github.com/i18next/next-app-dir-i18next-example/blob/main/app/i18n/index.js#L6
-const initI18next = async (locale: string, options = {}) => {
+const initI18next = async (
+  importer: Importer,
+  locale: string,
+  options = {},
+) => {
   // on server side we create a new instance for each render, because during compilation everything seems to be executed in parallel
   const i18nInstance = createInstance()
   await i18nInstance
     .use(initReactI18next)
-    .use(resourcesToBackend(IMPORTER))
+    .use(resourcesToBackend(importer))
     .init({
-      // debug: true,
+      debug: true,
       fallbackLng: DEFAULT_LOCALE,
-      defaultNS: 'common',
+      fallbackNS: DEFAULT_NAMESPACE,
+      defaultNS: DEFAULT_NAMESPACE,
+      ns: [DEFAULT_NAMESPACE],
       lng: locale,
       ...options,
     })
@@ -40,14 +54,15 @@ export async function getLocale(): Promise<string> {
 
   // Accept-Language header
   const headerLocale = acceptLanguage.get(headersStore.get('accept-language'))
-  if (typeof headerLocale === 'string' && LOCALES.includes(headerLocale))
+  if (typeof headerLocale === 'string' && LOCALES.includes(headerLocale)) {
     return headerLocale
+  }
 
   return DEFAULT_LOCALE
 }
 
-export async function getServerTranslate(locale: string) {
-  const i18nextInstance = await initI18next(locale)
+export async function getServerTranslate(importer: Importer, locale: string) {
+  const i18nextInstance = await initI18next(importer, locale)
   return i18nextInstance.getFixedT(locale)
 }
 

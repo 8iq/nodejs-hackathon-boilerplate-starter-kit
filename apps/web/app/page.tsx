@@ -1,12 +1,12 @@
 'use server'
 
-import { getLocale, getServerTranslate } from '@repo/i18n/server'
 import { Layout } from '@repo/ui/general'
 import Image from 'next/image'
 import React from 'react'
 
 import { BrandTitle, Logo } from '../components/BrandTitle'
 import { FormExample } from '../components/FormExample'
+import { getTranslate } from '../providers/i18n/server'
 import styles from './page.module.css'
 
 const LINKS = [
@@ -34,12 +34,11 @@ const LINKS = [
 ]
 
 async function Head(): Promise<React.JSX.Element> {
-  const locale = await getLocale()
-  const translate = await getServerTranslate(locale)
+  const translate = await getTranslate()
 
   return (
     <div className={styles.description}>
-      <p>{translate('dashboard.title', 'Dashboard')}</p>
+      <p>{translate('dashboard.title', 'Dash')}</p>
       <div>
         <BrandTitle collapsed={false} />
       </div>
