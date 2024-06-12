@@ -1,0 +1,138 @@
+{
+  "pages": {
+    "login": {
+      "title": "Войдите в свой аккаунт",
+      "google": "Войти используя Google",
+      "github": "Войти используя GitHub",
+      "signin": "Войти",
+      "signup": "Зарегистрироваться",
+      "divider": "или",
+      "fields": {
+        "email": "Электронная почта",
+        "password": "Пароль"
+      },
+      "errors": {
+        "validEmail": "Неверный адрес электронной почты"
+      },
+      "buttons": {
+        "submit": "Войти",
+        "forgotPassword": "Забыли пароль?",
+        "noAccount": "Нет аккаунта?",
+        "rememberMe": "Запомнить меня"
+      }
+    },
+    "forgotPassword": {
+      "title": "Забыли свой пароль?",
+      "fields": {
+        "email": "Электронная почта"
+      },
+      "errors": {
+        "validEmail": "Неверный адрес электронной почты"
+      },
+      "buttons": {
+        "submit": "Отправить инструкции по сбросу"
+      }
+    },
+    "register": {
+      "title": "Создайте свой аккаунт",
+      "fields": {
+        "email": "Электронная почта",
+        "password": "Пароль"
+      },
+      "errors": {
+        "validEmail": "Неверный адрес электронной почты"
+      },
+      "buttons": {
+        "submit": "Зарегистрироваться",
+        "haveAccount": "Уже есть аккаунт?"
+      }
+    },
+    "updatePassword": {
+      "title": "Обновить пароль",
+      "fields": {
+        "password": "Новый пароль",
+        "confirmPassword": "Подтвердите новый пароль"
+      },
+      "errors": {
+        "confirmPasswordNotMatch": "Пароли не совпадают"
+      },
+      "buttons": {
+        "submit": "Обновить"
+      }
+    },
+    "error": {
+      "info": "Возможно, вы забыли добавить компонент {{action}} к ресурсу {{resource}}.",
+      "404": "Извините, страница, которую вы посетили, не существует.",
+      "resource404": "Вы уверены, что создали ресурс {{resource}}?",
+      "backHome": "Вернуться на главную"
+    }
+  },
+  "actions": {
+    "list": "Список",
+    "create": "Создать",
+    "edit": "Редактировать",
+    "show": "Показать"
+  },
+  "buttons": {
+    "create": "Создать",
+    "save": "Сохранить",
+    "logout": "Выйти",
+    "delete": "Удалить",
+    "edit": "Редактировать",
+    "cancel": "Отменить",
+    "confirm": "Вы уверены?",
+    "filter": "Фильтр",
+    "clear": "Очистить",
+    "refresh": "Обновить",
+    "show": "Показать",
+    "undo": "Отменить",
+    "import": "Импортировать",
+    "clone": "Клонировать",
+    "notAccessTitle": "У вас нет разрешения на доступ"
+  },
+  "warnWhenUnsavedChanges": "Вы уверены, что хотите уйти? У вас есть несохраненные изменения.",
+  "notifications": {
+    "success": "Успешно",
+    "error": "Ошибка (код состояния: {{statusCode}})",
+    "undoable": "У вас есть {{seconds}} секунд, чтобы отменить",
+    "createSuccess": "Успешно создан {{resource}}",
+    "createError": "Ошибка при создании {{resource}} (код состояния: {{statusCode}})",
+    "deleteSuccess": "Успешно удален {{resource}}",
+    "deleteError": "Ошибка при удалении {{resource}} (код состояния: {{statusCode}})",
+    "editSuccess": "Успешно отредактирован {{resource}}",
+    "editError": "Ошибка при редактировании {{resource}} (код состояния: {{statusCode}})",
+    "importProgress": "Импортируется: {{processed}}/{{total}}"
+  },
+  "loading": "Загрузка",
+  "tags": {
+    "clone": "Клонировать"
+  },
+  "dashboard": {
+    "title": "Панель управления"
+  },
+  "blog_posts": {
+    "blog_posts": "Блог Посты",
+    "fields": {
+      "id": "Идентификатор",
+      "title": "Заголовок",
+      "category": "Категория",
+      "status": {
+        "title": "Статус",
+        "published": "Опубликовано",
+        "draft": "Черновик",
+        "rejected": "Отклонено"
+      },
+      "content": "Содержание",
+      "createdAt": "Создано"
+    },
+    "titles": {
+      "create": "Создать пост",
+      "edit": "Редактировать пост",
+      "list": "Посты",
+      "show": "Показать пост"
+    }
+  },
+  "table": {
+    "actions": "Действия"
+  }
+}

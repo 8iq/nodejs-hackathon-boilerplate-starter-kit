@@ -1,28 +1,10 @@
-# Learn
+# Examples and sources
 
-0. You should have a [basic knowledge](https://htmlacademy.org/courses/html-css-basics/intro/html) about [HTML/CSS](https://www.internetingishard.com/html-and-css/)
-1. You should know [Modern JavaScript](https://javascript.info/)
-2. You should know [GraphQL](https://graphql.org/)
-
-## Server side
-
-1. You know something about [Node.js](https://nodejs.dev/)
-1. You should follow the [KeystoneJS tutorial](https://keystonejs.com/docs/getting-started)
-
-## Client side
-
-1. You should know [React](https://nextjs.org/learn/basics/getting-started)
-1. You should follow the [Next.js tutorial](https://nextjs.org/learn/basics/getting-started)
-
-## More
-
-1. yarn workspaces: https://yarnpkg.com/features/workspaces
-2. CSS animations: https://css-animations.io/ (base level), https://tympanus.net/codrops/ (pro examples)
-3. JS Egghead.io courses: https://egghead.io/
-4. Docker compose: https://docs.docker.com/compose/
-
-# Philosophy
-
-1.  BACKEND: You write domain models and services on backend side (it's better if each service have only one action)
-2.  TESTS: TDD is matter! Tests should work parallel and independently! You should write tests in mind of extensibility (you don't need to rewrite the test if you add extra fields). You can run tests on a remote production API by URL or local development server!
-3.  STYLE: You should follow the common style or change the whole style everywhere (not only in your files)
+- https://ant.design/docs/react/use-with-next - NextJS + Antd
+- https://github.com/ant-design/ant-design-examples/tree/main/examples - NextJS + Antd
+- https://github.com/i18next/next-app-dir-i18next-example/tree/main - i18n + NextJS
+- https://github.com/markomitranic/nextjs-server-context-workshop - NextJS server context + client context (https://medium.com/homullus/cursed-server-context-patterns-in-next-js-14-64407c90fdd4)
+- https://github.com/marketplace/actions/debugging-with-ssh#shut-down-server-if-user-doesnt-connect - debug Github CI by ssh
+- https://github.com/refinedev/refine/blob/master/packages/core/src/contexts/i18n/index.tsx - refine i18n
+- https://github.com/vercel/turbo/blob/main/examples/basic/apps/web/app/page.tsx - Turborepo start for Next.JS
+- https://github.com/refinedev/refine/blob/master/documentation/docs/routing/integrations/next-js/index.md#authentication - Auth + Next + Refine

@@ -1,0 +1,40 @@
+{
+  "name": "@repo/i18n",
+  "version": "0.0.1",
+  "private": true,
+  "exports": {
+    ".": "./index.ts",
+    "./server": "./server.ts"
+  },
+  "scripts": {
+    "lint": "eslint . --max-warnings 0"
+  },
+  "dependencies": {
+    "accept-language": "^3.0.18",
+    "i18next": "^23.11.5",
+    "i18next-browser-languagedetector": "^8.0.0",
+    "i18next-chained-backend": "^4.6.2",
+    "i18next-http-backend": "^2.5.2",
+    "i18next-resources-to-backend": "^1.2.1",
+    "i18next-xhr-backend": "^3.2.2",
+    "next-client-cookies": "^1.1.1",
+    "next-i18next": "^15.3.0",
+    "react-i18next": "^14.1.2"
+  },
+  "peerDependencies": {
+    "@turbo/gen": "^1.13.3",
+    "@types/eslint": "^8.56.10",
+    "@types/node": "^20.12.8",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.0",
+    "eslint": "^8.57.0",
+    "next": "^14.2.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*"
+  }
+}

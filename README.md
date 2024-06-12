@@ -1,6 +1,6 @@
 [![Hackathon workflow](https://image.shutterstock.com/image-vector/banner-hackathon-design-sprintlike-event-260nw-1418226719.jpg)](https://drive.google.com/drive/folders/1Srw2T91_rRLTWgJc-Zh693hhbD2JS6Yh)
 
-What's inside? React + Next.js + Ant + Turbo + react-i18next + Refine  
+What's inside? React + Next.js + Ant + Turbo + react-i18next + Refine
 
 # Rapid Development Node.js Hackathon template
 

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+	<defs xmlns="http://www.w3.org/2000/svg">
+		<radialGradient id="a" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#fff"/>
+			<stop offset="60%" stop-color="#fff" stop-opacity="0"/>
+		</radialGradient>
+	</defs>
+	<circle cx="50" cy="50" r="25" fill="none" stroke="rgba(255,255,255,.1)" stroke-width=".2">
+		<animate attributeName="opacity" begin="0.2s" dur="3s" repeatCount="indefinite" values="1;0.1;0.1;1"/>
+	</circle>
+	<circle cx="50" cy="50" r="25" fill="url(#a)" fill-opacity=".1">
+		<animate attributeName="opacity" dur="3s" repeatCount="indefinite" values="1;0.5;0.5;1"/>
+	</circle>
+	<circle cx="50" cy="50" r="45" fill="none" stroke="rgba(255,255,255,.1)" stroke-width=".2">
+		<animate attributeName="opacity" begin="0.4s" dur="3s" repeatCount="indefinite" values="1;0.1;0.1;1"/>
+	</circle>
+</svg>
