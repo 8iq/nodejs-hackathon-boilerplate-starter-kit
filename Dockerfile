@@ -1,3 +1,4 @@
+# syntax=docker/dockerfile:1.7-labs
 FROM buildpack-deps:bookworm AS base
 # https://hub.docker.com/_/node
 # https://github.com/nodejs/docker-node/blob/18ed56ea9ba03c16f48372927f5eb2553033e8de/14/buster/Dockerfile
@@ -36,10 +37,9 @@ RUN echo "# Build time .env config!" >> /home/app/.env && \
 	echo "DATABASE_URL=undefined" >> /home/app/.env && \
 	echo "NODE_ENV=production" >> /home/app/.env
 
-COPY package*.json ./
-COPY ./yarn.lock ./yarn.lock
-COPY ./.yarn ./.yarn
-COPY ./.yarnrc.yml ./.yarnrc.yml
+COPY package*.json yarn.lock .yarn .yarnrc.yml ./
+COPY --parents packages/*/package.json ./
+COPY --parents apps/*/package.json ./
 
 # Cache packages!
 RUN set -ex \
