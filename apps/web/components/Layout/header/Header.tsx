@@ -1,7 +1,6 @@
 'use client'
 
 import {
-  useGetIdentity,
   useIsAuthenticated,
   useLink,
 } from '@repo/ui/refine/core'

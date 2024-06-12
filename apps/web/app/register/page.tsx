@@ -15,7 +15,7 @@ export default function RegisterPage(): React.JSX.Element {
   const { params } = useParsed<QueryProps>()
   const translate = useTranslate()
 
-  const emailFromSearchParams = params['email']
+  const emailFromSearchParams = params?.email
 
   const initialValues = emailFromSearchParams
     ? { email: emailFromSearchParams }

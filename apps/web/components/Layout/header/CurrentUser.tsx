@@ -3,15 +3,15 @@
 import { Button, Popover, Typography } from '@repo/ui/general'
 import { LogoutOutlined } from '@repo/ui/icons'
 import { useGetIdentity, useLogout } from '@repo/ui/refine/core'
-import React, { useMemo, useState } from 'react'
+import React from 'react'
 
 import { CustomAvatar } from './CustomAvatar'
 
 const Text = Typography.Text
 
 export const CurrentUser: React.FC = () => {
-  const [opened, setOpened] = useState(false)
-  const { data: user } = useGetIdentity()
+  // const [opened, setOpened] = useState(false)
+  const { data: user } = useGetIdentity<any>()
   const { mutate: logout } = useLogout()
   const name = user?.name || user?.email || 'NoName'
   const avatarUrl = user?.avatarUrl

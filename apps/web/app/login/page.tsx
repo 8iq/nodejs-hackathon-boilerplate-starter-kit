@@ -18,9 +18,9 @@ export default function LoginPage(): React.JSX.Element {
   const { mutate } = useLogin()
   const translate = useTranslate()
 
-  const emailFromSearchParams = params['email']
-  const accessToken = params['accessToken']
-  const refreshToken = params['refreshToken']
+  const emailFromSearchParams = params?.email
+  const accessToken = params?.accessToken
+  const refreshToken = params?.refreshToken
 
   const initialValues = emailFromSearchParams
     ? { email: emailFromSearchParams }

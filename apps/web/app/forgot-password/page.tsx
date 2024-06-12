@@ -13,7 +13,7 @@ interface QueryProps {
 export default function ForgotPasswordPage(): React.JSX.Element {
   const { params } = useParsed<QueryProps>()
 
-  const emailFromSearchParams = params['email']
+  const emailFromSearchParams = params?.email
 
   const initialValues = emailFromSearchParams
     ? { email: emailFromSearchParams }

@@ -40,7 +40,7 @@ export function Providers({
 }) {
   const { t, i18n } = useTranslation(DEFAULT_NAMESPACE, { lng: locale })
   const i18nProvider: I18nProvider = {
-    translate: (key: string, params) => t(key, params),
+    translate: (key: string, options?: any) => t(key, options) as string,
     changeLocale: (lang: string) => i18n.changeLanguage(lang),
     getLocale: () => i18n.language,
   }

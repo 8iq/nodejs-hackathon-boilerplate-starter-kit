@@ -13,7 +13,7 @@ export function ThemeProvider({
   defaultMode?: string
   children: React.ReactNode
 }>) {
-  const [mode, setMode] = useState(defaultMode)
+  const [mode] = useState(defaultMode)
 
   const themeConfig: ThemeConfig = {
     algorithm: mode === 'light' ? theme.defaultAlgorithm : theme.darkAlgorithm,

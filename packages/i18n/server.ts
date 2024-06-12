@@ -11,10 +11,12 @@ import {
   LOCALES,
 } from './config'
 
-type Importer = (
-  language: string,
-  namespace: string,
-) => Promise<string | boolean | null | undefined>
+interface Importer {
+  (
+    language: string,
+    namespace: string,
+  ): Promise<string | boolean | null | undefined>
+}
 
 acceptLanguage.languages(LOCALES)
 
