@@ -7,6 +7,7 @@ import acceptLanguage from 'accept-language'
 import {
   DEFAULT_LOCALE,
   DEFAULT_NAMESPACE,
+  IS_I18N_DEBUG_ENABLED,
   LOCALE_COOKIE_NAME,
   LOCALES,
 } from './config'
@@ -32,7 +33,7 @@ const initI18next = async (
     .use(initReactI18next)
     .use(resourcesToBackend(importer))
     .init({
-      debug: true,
+      debug: IS_I18N_DEBUG_ENABLED,
       fallbackLng: DEFAULT_LOCALE,
       fallbackNS: DEFAULT_NAMESPACE,
       defaultNS: DEFAULT_NAMESPACE,

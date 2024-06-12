@@ -6,8 +6,6 @@ import { BrandTitle } from '../BrandTitle'
 import { Header } from './header'
 
 export const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
-  console.log('Layout')
-
   return (
     // ThemedLayoutV2: https://refine.dev/docs/ui-integrations/ant-design/components/themed-layout/
     // Header: https://refine.dev/docs/ui-integrations/ant-design/components/themed-layout/#header

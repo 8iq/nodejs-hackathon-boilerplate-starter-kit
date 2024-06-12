@@ -1,9 +1,6 @@
 'use client'
 
-import {
-  useIsAuthenticated,
-  useLink,
-} from '@repo/ui/refine/core'
+import { useIsAuthenticated, useLink, useTranslate } from '@repo/ui/refine/core'
 import React from 'react'
 
 import { Layout, Space, theme } from '@repo/ui/general'
@@ -17,6 +14,8 @@ export const Header: React.FC = () => {
   const Link = useLink()
   const { data: auth } = useIsAuthenticated()
   const isAuthenticated = auth?.authenticated
+  const translate = useTranslate()
+  const loginMessage = translate('buttons.login', 'Login')
 
   const headerStyles: React.CSSProperties = {
     backgroundColor: token.colorBgElevated,
@@ -36,7 +35,7 @@ export const Header: React.FC = () => {
       <Space>
         {/*<Notifications/>*/}
         {isAuthenticated ? <CurrentUser /> : null}
-        {!isAuthenticated ? <Link to={'login'}>Login</Link> : null}
+        {!isAuthenticated ? <Link to={'login'}>{loginMessage}</Link> : null}
       </Space>
     </BaseHeader>
   )
