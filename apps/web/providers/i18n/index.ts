@@ -9,6 +9,7 @@ import {
   DEFAULT_LOCALE,
   DEFAULT_NAMESPACE,
   LOCALES,
+  IS_I18N_DEBUG_ENABLED,
 } from '@repo/i18n'
 
 import { IMPORTER } from './importer'
@@ -20,7 +21,7 @@ i18next
   .use(LanguageDetector)
   .use(resourcesToBackend(IMPORTER))
   .init({
-    // debug: true,
+    debug: IS_I18N_DEBUG_ENABLED,
     lng: undefined, // let detect the language on client side
     fallbackLng: DEFAULT_LOCALE,
     fallbackNS: DEFAULT_NAMESPACE,

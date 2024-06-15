@@ -1,11 +1,18 @@
 'use server'
 
-import { AntdInferencer } from '@repo/ui/refine/antd'
+import dynamic from 'next/dynamic'
 import React from 'react'
 
 import { Layout } from 'web/components/Layout'
 
-export default async function EditPage(): Promise<React.JSX.Element> {
+const AntdInferencer = dynamic(
+  () => import('@repo/ui/refine/antd').then((i) => i.AntdInferencer),
+  {
+    ssr: false,
+  },
+)
+
+export default async function EditPage() {
   return (
     <Layout>
       <AntdInferencer />
