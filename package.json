@@ -17,7 +17,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "@babel/core": "^7.24.6",
+    "@babel/core": "^7.29.6",
     "@playwright/test": "^1.44.1",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
